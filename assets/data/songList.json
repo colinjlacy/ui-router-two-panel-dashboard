@@ -1,0 +1,50 @@
+[
+    {
+      "id": 0,
+      "title": "Black",
+      "length": 1111,
+      "release": 1990
+    },
+    {
+      "id": 1,
+      "title": "Better Man",
+      "lenth": 2222,
+      "release": 1991
+    },
+    {
+      "id": 2,
+      "title": "Do the Evolution",
+      "length": 3333,
+      "release": 1992
+    },
+    {
+      "id": 3,
+      "title": "Jeremy",
+      "length": 4444,
+      "release": 1991
+    },
+    {
+      "id": 4,
+      "title": "Light Years",
+      "length": 5555,
+      "release": 1996
+    },
+    {
+      "id": 5,
+      "title": "Wish List",
+      "length": 6666,
+      "release": 1993
+    },
+    {
+      "id": 6,
+      "title": "Even Flow",
+      "length": 7777,
+      "release": 1994
+    },
+    {
+      "id": 7,
+      "title": "Alive",
+      "length": 8888,
+      "release": 1991
+    }
+]

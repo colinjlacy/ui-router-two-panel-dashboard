@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pearlJam">
+<head>
+	<meta charset="UTF-8">
+	<title>Pearl Jam Lyrics</title>
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" href="assets/css/app.css"/>
+</head>
+<body>
+
+<div class="container page-wrapper">
+	<div class="row">
+		<div ui-view="songList"></div>
+		<div ui-view="lyrics"></div>
+	</div>
+</div>
+
+<!--Libraries-->
+<script src="assets/lib/jquery.min.js"></script>
+<script src="assets/lib/angular.min.js"></script>
+<script src="assets/lib/angular-ui-router.min.js"></script>
+
+<!--Application-->
+<script src="dist/app.app.js"></script>
+<script src="dist/app.controllers.js"></script>
+
+</body>
+</html>
