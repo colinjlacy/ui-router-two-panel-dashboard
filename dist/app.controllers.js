@@ -31,5 +31,6 @@ angular.module('pearlJam').controller('appCtrl', function ($scope) {
 	});
 	$scope.deactivate = function () {
 		$scope.$emit('deactivate');
+		$scope.activeSong = null;
 	};
 });

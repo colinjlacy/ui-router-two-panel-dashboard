@@ -1,9 +1,10 @@
 <div class="col-sm-7 col-md-8 right-column">
-	<!--<div class="row">-->
-		<!--<div class="col-sm-8" id="deactivate" ng-click="deactivate()">Lacy!</div>-->
-	<!--</div>-->
-	<div class="card">
+	<div class="card" ng-if="activeSong">
+		<button type="button" class="close" aria-label="Close" ng-click="deactivate()">
+			<span aria-hidden="true">&times;</span>
+		</button>
 		<h2>{{activeSong.title}}</h2>
 		<p ng-bind-html="activeSong.lyrics"></p>
 	</div>
+	<h3 class="text-muted" ng-if="!activeSong">Please choose a song to the left...</h3>
 </div>

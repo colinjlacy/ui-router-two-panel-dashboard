@@ -32,5 +32,6 @@ angular.module('pearlJam')
 		});
 		$scope.deactivate = function() {
 			$scope.$emit('deactivate');
+			$scope.activeSong = null;
 		};
 	});
