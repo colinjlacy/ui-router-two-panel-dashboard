@@ -5,10 +5,13 @@ angular.module('pearlJam', [
 	'ui.router',
 	'ngSanitize'
 ])
-	.config(function($stateProvider) {
+	.config(function($stateProvider, $UrlRouterProvider) {
+
+		$UrlRouterProvider.otherwise('/#/');
+		console.log("node");
 		$stateProvider
 			.state('root', {
-				url: "/",
+				url: "/#/",
 				templateUrl: './src/views/app.main.html',
 				controller: 'appCtrl',
 				abstract: true
@@ -26,4 +29,7 @@ angular.module('pearlJam', [
 					}
 				}
 			});
-		});
+		})
+	.run(($rootScope) => {
+		$rootScope.$on("$stateChangeError", console.log.bind(console));
+	});
