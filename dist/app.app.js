@@ -4,9 +4,13 @@
 'use strict';
 
 angular.module('pearlJam', ['ui.router']).config(function ($stateProvider) {
-	$stateProvider.state('pearlJam', {
+	$stateProvider.state('root', {
 		url: "/",
-		//templateUrl: "./src/views/app.main.html",
+		templateUrl: './src/views/app.main.html',
+		controller: 'appCtrl',
+		abstract: true
+	}).state('root.views', {
+		url: "",
 		views: {
 			'songList': {
 				templateUrl: "./src/views/app.songList.html",

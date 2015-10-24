@@ -6,9 +6,14 @@ angular.module('pearlJam', [
 ])
 	.config(function($stateProvider) {
 		$stateProvider
-			.state('pearlJam', {
+			.state('root', {
 				url: "/",
-				//templateUrl: "./src/views/app.main.html",
+				templateUrl: './src/views/app.main.html',
+				controller: 'appCtrl',
+				abstract: true
+			})
+			.state('root.views', {
+				url: "",
 				views: {
 					'songList': {
 						templateUrl: "./src/views/app.songList.html",

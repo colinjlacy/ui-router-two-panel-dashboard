@@ -3,7 +3,15 @@
  */
 'use strict';
 
-angular.module('pearlJam').controller('pearlJamCtrl', function ($scope) {}).controller('songListCtrl', function ($scope, $http) {
+angular.module('pearlJam').controller('appCtrl', function ($scope) {
+	$scope.$on('activate', function (e, id) {
+		$scope.active = true;
+		$scope.$broadcast('getSong', id);
+	});
+	$scope.$on('deactivate', function () {
+		$scope.active = false;
+	});
+}).controller('songListCtrl', function ($scope, $http) {
 	$http.get('/assets/data/songList.json').then(function (res) {
 		$scope.songList = res.data;
 	}, function (err) {
@@ -12,6 +20,16 @@ angular.module('pearlJam').controller('pearlJamCtrl', function ($scope) {}).cont
 
 	$scope.activate = function (id) {
 		$scope.$emit('activate', id);
-		console.log(id);
 	};
-}).controller('lyricsCtrl', function ($scope, $http) {});
+}).controller('lyricsCtrl', function ($scope, $http) {
+	$scope.$on('getSong', function (e, id) {
+		$http.get('/assets/data/' + id + '.json').then(function (res) {
+			console.log(res.data);
+		}, function (err) {
+			console.log(err);
+		});
+	});
+	$scope.deactivate = function () {
+		$scope.$emit('deactivate');
+	};
+});
