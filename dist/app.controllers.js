@@ -23,8 +23,8 @@ angular.module('pearlJam').controller('appCtrl', function ($scope) {
 	};
 }).controller('lyricsCtrl', function ($scope, $http) {
 	$scope.$on('getSong', function (e, id) {
-		$http.get('/assets/data/' + id + '.json').then(function (res) {
-			console.log(res.data);
+		$http.get('/assets/data/song' + id + '.json').then(function (res) {
+			$scope.activeSong = res.data;
 		}, function (err) {
 			console.log(err);
 		});

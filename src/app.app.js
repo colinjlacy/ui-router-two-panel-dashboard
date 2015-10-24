@@ -2,7 +2,8 @@
  * Created by colinjlacy on 10/24/15.
  */
 angular.module('pearlJam', [
-	'ui.router'
+	'ui.router',
+	'ngSanitize'
 ])
 	.config(function($stateProvider) {
 		$stateProvider

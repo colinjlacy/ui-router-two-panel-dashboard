@@ -3,7 +3,7 @@
  */
 'use strict';
 
-angular.module('pearlJam', ['ui.router']).config(function ($stateProvider) {
+angular.module('pearlJam', ['ui.router', 'ngSanitize']).config(function ($stateProvider) {
 	$stateProvider.state('root', {
 		url: "/",
 		templateUrl: './src/views/app.main.html',

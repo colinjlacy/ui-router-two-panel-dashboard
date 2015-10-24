@@ -24,8 +24,8 @@ angular.module('pearlJam')
 	})
 	.controller('lyricsCtrl', ($scope, $http) => {
 		$scope.$on('getSong', (e, id) => {
-			$http.get(`/assets/data/${id}.json`).then(res => {
-				console.log(res.data);
+			$http.get(`/assets/data/song${id}.json`).then(res => {
+				$scope.activeSong = res.data;
 			}, err => {
 				console.log(err);
 			});
